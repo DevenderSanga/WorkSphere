@@ -6,6 +6,7 @@ import {
   UserRound,
   ArrowRight,
 } from "lucide-react";
+
 import "./Login.css";
 
 function Login() {
@@ -32,18 +33,67 @@ function Login() {
       role,
     };
 
-    // Keep the active login separate in each browser tab.
+    // Save active user for the current browser tab.
     sessionStorage.setItem(
       "worksphereUser",
       JSON.stringify(user)
     );
 
-    // Keep separate demo account records for each role.
     if (role === "freelancer") {
       localStorage.setItem(
         "worksphereFreelancerUser",
         JSON.stringify(user)
       );
+
+      // Automatically register/update freelancer directory profile.
+      try {
+        const savedFreelancers = JSON.parse(
+          localStorage.getItem("worksphereFreelancers") || "[]"
+        );
+
+        const freelancers = Array.isArray(savedFreelancers)
+          ? savedFreelancers
+          : [];
+
+        const existingIndex = freelancers.findIndex(
+          (freelancer) =>
+            freelancer.email?.toLowerCase() === cleanEmail
+        );
+
+        if (existingIndex !== -1) {
+          // Preserve existing profile information.
+          freelancers[existingIndex] = {
+            ...freelancers[existingIndex],
+            name: cleanName,
+            email: cleanEmail,
+          };
+        } else {
+          // Create a basic profile for a new freelancer.
+          freelancers.push({
+            id: `FRE-${Date.now()}`,
+            name: cleanName,
+            email: cleanEmail,
+            title: "Freelancer",
+            location: "",
+            experience: "",
+            skills: "",
+            bio: "",
+            profileImage: "",
+            portfolio: [],
+          });
+        }
+
+        localStorage.setItem(
+          "worksphereFreelancers",
+          JSON.stringify(freelancers)
+        );
+
+        window.dispatchEvent(
+          new Event("worksphereFreelancersUpdated")
+        );
+      } catch (error) {
+        console.error("Unable to save freelancer profile:", error);
+      }
 
       navigate("/freelancer/dashboard");
     } else {
@@ -97,6 +147,7 @@ function Login() {
           </div>
 
           <label htmlFor="name">Full Name</label>
+
           <input
             id="name"
             type="text"
@@ -107,6 +158,7 @@ function Login() {
           />
 
           <label htmlFor="email">Email Address</label>
+
           <input
             id="email"
             type="email"
