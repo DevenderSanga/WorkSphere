@@ -573,3 +573,91 @@
     font-size: 24px;
   }
 }
+
+/* Fix homepage horizontal overflow on mobile */
+
+.home-page,
+.home-page * {
+  box-sizing: border-box;
+}
+
+@media (max-width: 360px) {
+  .hero,
+  .section,
+  .projects-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-container {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-content,
+  .hero-image {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-search {
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .hero-search button {
+    padding: 11px 12px;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .hero-image-card > img {
+    max-width: 100%;
+  }
+
+  .floating-top {
+    left: 5px;
+  }
+
+  .floating-bottom {
+    right: 5px;
+  }
+
+  .cta-section {
+    width: calc(100% - 24px);
+    max-width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+/* Homepage width correction */
+.home-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+}
+
+.home-page > .navbar {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 360px) {
+  .home-page,
+  .home-page main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
