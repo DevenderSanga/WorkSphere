@@ -1,5 +1,5 @@
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Search,
   Users,
@@ -28,7 +28,29 @@ function readFreelancers() {
 }
 
 function FindFreelancers() {
-  const [freelancers] = useState(readFreelancers);
+const [freelancers, setFreelancers] = useState(readFreelancers);
+
+useEffect(() => {
+  const refreshFreelancers = () => {
+    setFreelancers(readFreelancers());
+  };
+
+  window.addEventListener("storage", refreshFreelancers);
+  window.addEventListener(
+    "worksphereFreelancersUpdated",
+    refreshFreelancers
+  );
+
+  refreshFreelancers();
+
+  return () => {
+    window.removeEventListener("storage", refreshFreelancers);
+    window.removeEventListener(
+      "worksphereFreelancersUpdated",
+      refreshFreelancers
+    );
+  };
+}, []);
   const [search, setSearch] = useState("");
   const [experienceFilter, setExperienceFilter] = useState("All");
   const [skillFilter, setSkillFilter] = useState("All");
