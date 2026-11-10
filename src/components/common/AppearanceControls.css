@@ -1,0 +1,38 @@
+
+.appearance-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.appearance-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.appearance-button:hover {
+  background: var(--bg-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+  .appearance-controls {
+    gap: 6px;
+  }
+
+  .appearance-button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

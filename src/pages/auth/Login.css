@@ -1,0 +1,137 @@
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background: #f4f7fb;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.login-logo {
+  display: block;
+  margin-bottom: 30px;
+  color: #172554;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-logo span {
+  color: #2563eb;
+}
+
+.login-card h1 {
+  margin-bottom: 10px;
+  color: #172554;
+  font-size: 28px;
+  text-align: center;
+}
+
+.login-subtitle {
+  margin-bottom: 28px;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-card form label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.role-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.role-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 15px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #475569;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.role-option.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-card input:focus {
+  border-color: #2563eb;
+}
+
+.login-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.login-submit:hover {
+  background: #1d4ed8;
+}
+
+.login-note {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.back-home {
+  display: block;
+  margin-top: 20px;
+  color: #2563eb;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 28px 20px;
+  }
+}

@@ -1,0 +1,135 @@
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.app h1 {
+  font-size: 36px;
+  color: #2563eb;
+}
+
+.app p {
+  font-size: 17px;
+  color: #64748b;
+}
+
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CLIENT DASHBOARD */
+
+.client-dashboard-placeholder {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.client-dashboard-header {
+  min-height: 75px;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.client-brand {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.client-brand span {
+  color: var(--primary-color);
+}
+
+.client-dashboard-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 25px;
+}
+
+.client-welcome-card {
+  padding: 35px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.client-welcome-card h1 {
+  margin-bottom: 12px;
+}
+
+.client-welcome-card p {
+  color: var(--muted-color);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.client-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.client-stat-card {
+  padding: 25px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.client-stat-card h3 {
+  font-size: 15px;
+  color: var(--muted-color);
+  margin-bottom: 15px;
+}
+
+.client-stat-card h2 {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .client-dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-welcome-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-dashboard-header {
+    padding: 15px;
+  }
+
+  .client-brand {
+    font-size: 21px;
+  }
+
+  .client-dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .client-dashboard-content {
+    padding: 25px 15px;
+  }
+}
+

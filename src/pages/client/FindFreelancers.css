@@ -1,0 +1,692 @@
+
+.find-freelancers-page {
+  width: 100%;
+  color: #172033;
+}
+
+.find-freelancers-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.find-freelancers-eyebrow {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.find-freelancers-heading h1 {
+  margin: 8px 0;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.find-freelancers-heading p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.freelancer-total-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+}
+
+.freelancer-total-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 10px;
+}
+
+.freelancer-total-card strong,
+.freelancer-total-card span {
+  display: block;
+}
+
+.freelancer-total-card strong {
+  font-size: 21px;
+}
+
+.freelancer-total-card span {
+  margin-top: 3px;
+  color: #718096;
+  font-size: 12px;
+}
+
+.freelancer-search-section {
+  padding: 20px;
+  margin-bottom: 27px;
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 13px;
+}
+
+.freelancer-search-box {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 14px;
+  height: 48px;
+  color: #8792a5;
+  background: #f8fafc;
+  border: 1px solid #e5eaf1;
+  border-radius: 9px;
+}
+
+.freelancer-search-box input {
+  width: 100%;
+  height: 100%;
+  color: #172033;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+.freelancer-filter-row {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 17px;
+}
+
+.freelancer-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 180px;
+}
+
+.freelancer-filter label {
+  color: #536174;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.freelancer-filter select {
+  height: 40px;
+  padding: 0 12px;
+  color: #263247;
+  background: #ffffff;
+  border: 1px solid #dfe5ed;
+  border-radius: 8px;
+  outline: none;
+}
+
+.freelancer-clear-filter {
+  height: 40px;
+  padding: 0 15px;
+  color: #2563eb;
+  background: #eff6ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.freelancer-results-heading {
+  margin-bottom: 17px;
+}
+
+.freelancer-results-heading h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.freelancer-results-heading p {
+  margin: 0;
+  color: #8490a1;
+  font-size: 12px;
+}
+
+.freelancer-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.directory-freelancer-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 21px;
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 13px;
+  transition: 0.2s ease;
+}
+
+.directory-freelancer-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.07);
+  transform: translateY(-2px);
+}
+
+.directory-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 17px;
+}
+
+.directory-avatar {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 50%;
+}
+
+.directory-avatar img,
+.freelancer-modal-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.directory-available {
+  padding: 6px 9px;
+  color: #15803d;
+  background: #f0fdf4;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.directory-freelancer-info h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.directory-professional-title {
+  margin: 0 0 12px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.directory-location,
+.directory-experience {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  color: #718096;
+  font-size: 12px;
+}
+
+.directory-bio {
+  display: -webkit-box;
+  min-height: 54px;
+  margin: 13px 0;
+  overflow: hidden;
+  color: #657186;
+  font-size: 12px;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.directory-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 13px 0 18px;
+}
+
+.directory-skills span {
+  padding: 6px 9px;
+  color: #475569;
+  background: #f1f5f9;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.directory-skills .directory-more-skills {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.directory-card-footer {
+  display: flex;
+  gap: 9px;
+  padding-top: 15px;
+  margin-top: auto;
+  border-top: 1px solid #edf0f4;
+}
+
+.directory-view-button {
+  flex: 1;
+  height: 41px;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.directory-view-button:hover {
+  background: #1d4ed8;
+}
+
+.directory-contact-button {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 41px;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.freelancer-directory-empty {
+  padding: 55px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px dashed #d5deea;
+  border-radius: 13px;
+}
+
+.freelancer-empty-icon {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 50%;
+}
+
+.freelancer-directory-empty h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.freelancer-directory-empty p {
+  max-width: 440px;
+  margin: 0 auto 17px;
+  color: #8490a1;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.freelancer-directory-empty button {
+  padding: 10px 17px;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Profile modal */
+
+.freelancer-profile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.58);
+}
+
+.freelancer-profile-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  max-height: 88vh;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.freelancer-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.freelancer-modal-header span {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.freelancer-modal-header h2 {
+  margin: 5px 0 0;
+  font-size: 19px;
+}
+
+.freelancer-modal-header button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: #64748b;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.freelancer-modal-body {
+  padding: 23px 24px;
+  overflow-y: auto;
+}
+
+.freelancer-modal-profile {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.freelancer-modal-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 50%;
+}
+
+.freelancer-modal-profile h3 {
+  margin: 0 0 5px;
+  font-size: 19px;
+}
+
+.freelancer-modal-profile p {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 13px;
+}
+
+.freelancer-modal-profile span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #718096;
+  font-size: 12px;
+}
+
+.freelancer-modal-section {
+  padding: 19px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.freelancer-modal-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.freelancer-modal-section > p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.freelancer-modal-portfolio {
+  display: grid;
+  gap: 13px;
+}
+
+.freelancer-modal-project {
+  display: flex;
+  gap: 13px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 9px;
+}
+
+.freelancer-modal-project > img,
+.freelancer-project-placeholder {
+  flex-shrink: 0;
+  width: 85px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.freelancer-project-placeholder {
+  display: grid;
+  place-items: center;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.freelancer-modal-project h5 {
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+
+.freelancer-modal-project span {
+  color: #2563eb;
+  font-size: 11px;
+}
+
+.freelancer-modal-project p {
+  margin: 6px 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.freelancer-modal-project a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #2563eb;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.freelancer-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 24px;
+  border-top: 1px solid #edf0f4;
+}
+
+.freelancer-modal-close,
+.freelancer-modal-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.freelancer-modal-close {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.freelancer-modal-contact {
+  color: #ffffff;
+  background: #2563eb;
+}
+
+/* Dark theme */
+
+[data-theme="dark"] .find-freelancers-page {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .freelancer-total-card,
+[data-theme="dark"] .freelancer-search-section,
+[data-theme="dark"] .directory-freelancer-card,
+[data-theme="dark"] .freelancer-directory-empty,
+[data-theme="dark"] .freelancer-profile-modal {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .freelancer-search-box,
+[data-theme="dark"] .freelancer-filter select {
+  color: #e2e8f0;
+  background: #0f172a;
+  border-color: #475569;
+}
+
+[data-theme="dark"] .freelancer-search-box input {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .freelancer-search-box input::placeholder {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .directory-bio,
+[data-theme="dark"] .directory-location,
+[data-theme="dark"] .directory-experience,
+[data-theme="dark"] .freelancer-directory-empty p,
+[data-theme="dark"] .freelancer-results-heading p,
+[data-theme="dark"] .freelancer-total-card span {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .directory-skills span {
+  color: #cbd5e1;
+  background: #334155;
+}
+
+[data-theme="dark"] .directory-skills .directory-more-skills {
+  color: #93c5fd;
+  background: #1e3a8a;
+}
+
+[data-theme="dark"] .directory-card-footer,
+[data-theme="dark"] .freelancer-modal-header,
+[data-theme="dark"] .freelancer-modal-profile,
+[data-theme="dark"] .freelancer-modal-section,
+[data-theme="dark"] .freelancer-modal-footer {
+  border-color: #334155;
+}
+
+[data-theme="dark"] .freelancer-modal-header button,
+[data-theme="dark"] .freelancer-modal-close {
+  color: #cbd5e1;
+  background: #334155;
+}
+
+[data-theme="dark"] .freelancer-modal-section > p,
+[data-theme="dark"] .freelancer-modal-profile span,
+[data-theme="dark"] .freelancer-modal-project p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .freelancer-modal-project {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .directory-contact-button {
+  color: #93c5fd;
+  background: #1e3a8a;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .freelancer-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .find-freelancers-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .freelancer-total-card {
+    width: 100%;
+  }
+
+  .freelancer-directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .freelancer-filter {
+    width: 100%;
+  }
+
+  .freelancer-filter select {
+    width: 100%;
+  }
+
+  .freelancer-clear-filter {
+    width: 100%;
+  }
+
+  .freelancer-profile-overlay {
+    padding: 10px;
+  }
+
+  .freelancer-profile-modal {
+    max-height: 94vh;
+  }
+
+  .freelancer-modal-header,
+  .freelancer-modal-body,
+  .freelancer-modal-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .freelancer-modal-project {
+    flex-direction: column;
+  }
+
+  .freelancer-modal-project > img,
+  .freelancer-project-placeholder {
+    width: 100%;
+    height: 145px;
+  }
+}
